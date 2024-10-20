@@ -1,7 +1,7 @@
 import { Link }  from 'react-router-dom'
 import './Style.css'
 
-import Logo from '../../assets/imagens/logo.png'
+import Logo_g from '../../assets/imagens/logo-g.png'
 
 function Login() {
 
@@ -15,7 +15,7 @@ function Login() {
             <a href="#">Esqueci a senha</a>
           </form>
 
-        <img src={Logo} alt="Logo GDR" />
+        <img src={Logo_g} alt="Logo GDR" />
       </div>
   )
 }

@@ -2,13 +2,14 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
 h1{
   color: white;
   text-align: center;
   font-size: 32px;
+  padding-bottom: 15px;
 }
 
 form {
@@ -16,9 +17,10 @@ form {
   flex-direction: column;
   gap: 16px;
   padding: 10px;
-  border-radius: 8px;
-  max-width: 50%;
-  width: 450px;
+  border-radius: 10px;
+  max-width: 60%;
+  width: 500px;
+  height: 260px;
   background-color: #252b5c88;
 }
 
@@ -35,7 +37,7 @@ p {
 input {
   padding: 5px;
   margin: 8px;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 18px;
 }
 
@@ -45,7 +47,7 @@ button {
   font-size: 18px;
   background-color: #90adc6;
   color: rgb(27, 27, 27);
-  border-radius: 5px;
+  border-radius: 10px;
   
 }
 
@@ -66,4 +68,13 @@ form > a {
 form > a:hover {
   color: #5e93c2;
   text-decoration: underline;
+}
+
+img {
+  padding: 5px;
+}
+
+div.imagem {
+  display: inline-block;
+  flex-direction: unset;
 }
