@@ -1,6 +1,9 @@
+import { Link }  from 'react-router-dom'
 import './Style.css'
 
-function Castro() {
+import Logo from '../../assets/imagens/logo.png'
+
+function Login() {
 
   return (
       <div className='container'>
@@ -9,12 +12,12 @@ function Castro() {
             <input name='email' type="email" placeholder='E-mail' autocomplete="email" required maxlength="30"/>
             <input name='senha' type='password' placeholder='Senha' autocomplete="current-password" required minlength="8" maxlength="20"/>
             <button type='submit'>Entrar</button>
-            <a href="#" >Esqueci a senha</a>
-            <a href="#" >Cadastrar</a>
+            <a href="#">Esqueci a senha</a>
           </form>
-          
+
+        <img src={Logo} alt="Logo GDR" />
       </div>
   )
 }
 
-export default Home
+export default Login
