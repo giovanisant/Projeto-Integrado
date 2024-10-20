@@ -15,19 +15,33 @@ form {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 30px;
+  padding: 10px;
   border-radius: 8px;
   max-width: 50%;
-  width: 400px;
+  width: 450px;
   background-color: #252b5c88;
 }
 
+form > ::placeholder {
+  padding: 5px;
+}
+
+p {
+  padding: 5px;
+  margin: 5px;
+  color: white;
+}
+
 input {
+  padding: 5px;
+  margin: 8px;
   border-radius: 5px;
   font-size: 18px;
 }
 
 button {
+  padding: 5px;
+  margin: 8px;
   font-size: 18px;
   background-color: #90adc6;
   color: rgb(27, 27, 27);
