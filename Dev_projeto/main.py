@@ -1,72 +1,17 @@
-class Cliente:
-    def __init__(self, id_cliente, nome_cliente, email_cliente, tel_cliente, cpf_cliente):
-        self.id_cliente = id_cliente
-        self.nome_cliente = nome_cliente
-        self.email_cliente = email_cliente
-        self.tel_cliente = tel_cliente
-        self.cpf_cliente = cpf_cliente
+from cliente import Cliente
+from usuario import Usuario
+from agendamento import Agendamento
+from pagamento import Pagamento
+from orcamento import Orcamento
 
-    def __repr__(self):
-        return f"Cliente(ID: {self.id_cliente}, Nome: {self.nome_cliente}, Email: {self.email_cliente}, Telefone: {self.tel_cliente}, CPF: {self.cpf_cliente})"
-
-
-class Usuario:
-    def __init__(self, id_usuario, nome_usuario, email_usuario, tel_usuario, senha_usuario, cargo_usuario, cpf_usuario):
-        self.id_usuario = id_usuario
-        self.nome_usuario = nome_usuario
-        self.email_usuario = email_usuario
-        self.tel_usuario = tel_usuario
-        self.senha_usuario = senha_usuario
-        self.cargo_usuario = cargo_usuario
-        self.cpf_usuario = cpf_usuario
-
-    def __repr__(self):
-        return f"Usuario(ID: {self.id_usuario}, Nome: {self.nome_usuario}, Cargo: {self.cargo_usuario})"
-
-
-class Agendamento:
-    def __init__(self, id_agend, endereco_agend, data_hora_agend, id_cliente, id_usuario):
-        self.id_agend = id_agend
-        self.endereco_agend = endereco_agend
-        self.data_hora_agend = data_hora_agend
-        self.id_cliente = id_cliente
-        self.id_usuario = id_usuario
-
-    def __repr__(self):
-        return f"Agendamento(ID: {self.id_agend}, Endereço: {self.endereco_agend}, Data: {self.data_hora_agend})"
-
-
-class Pagamento:
-    def __init__(self, id_pagamento, id_cliente, id_orcamento):
-        self.id_pagamento = id_pagamento
-        self.id_cliente = id_cliente
-        self.id_orcamento = id_orcamento
-
-    def __repr__(self):
-        return f"Pagamento(ID: {self.id_pagamento}, Cliente ID: {self.id_cliente}, Orçamento ID: {self.id_orcamento})"
-
-
-class Orcamento:
-    def __init__(self, id_orcamento, descricao, valor_orcamento, id_usuario, id_cliente, id_pagamento):
-        self.id_orcamento = id_orcamento
-        self.descricao = descricao
-        self.valor_orcamento = valor_orcamento
-        self.id_usuario = id_usuario
-        self.id_cliente = id_cliente
-        self.id_pagamento = id_pagamento
-
-    def __repr__(self):
-        return f"Orcamento(ID: {self.id_orcamento}, Descrição: {self.descricao}, Valor: {self.valor_orcamento})"
-
-
-# Funções utilitárias
+# Listas para armazenar os registros
 clientes = []
 usuarios = []
 agendamentos = []
 pagamentos = []
 orcamentos = []
 
-
+# Funções para criar registros
 def criar_cliente():
     id_cliente = len(clientes) + 1
     nome = input("Nome do cliente: ")
@@ -76,7 +21,6 @@ def criar_cliente():
     cliente = Cliente(id_cliente, nome, email, telefone, cpf)
     clientes.append(cliente)
     print("Cliente criado com sucesso!")
-
 
 def criar_usuario():
     id_usuario = len(usuarios) + 1
@@ -90,7 +34,6 @@ def criar_usuario():
     usuarios.append(usuario)
     print("Usuário criado com sucesso!")
 
-
 def criar_agendamento():
     id_agend = len(agendamentos) + 1
     endereco = input("Endereço do agendamento: ")
@@ -101,7 +44,6 @@ def criar_agendamento():
     agendamentos.append(agendamento)
     print("Agendamento criado com sucesso!")
 
-
 def criar_pagamento():
     id_pagamento = len(pagamentos) + 1
     id_cliente = int(input("ID do cliente: "))
@@ -109,7 +51,6 @@ def criar_pagamento():
     pagamento = Pagamento(id_pagamento, id_cliente, id_orcamento)
     pagamentos.append(pagamento)
     print("Pagamento criado com sucesso!")
-
 
 def criar_orcamento():
     id_orcamento = len(orcamentos) + 1
@@ -122,37 +63,33 @@ def criar_orcamento():
     orcamentos.append(orcamento)
     print("Orçamento criado com sucesso!")
 
-
+# Funções para listar registros
 def listar_clientes():
     print("\nClientes:")
     for cliente in clientes:
         print(cliente)
-
 
 def listar_usuarios():
     print("\nUsuários:")
     for usuario in usuarios:
         print(usuario)
 
-
 def listar_agendamentos():
     print("\nAgendamentos:")
     for agendamento in agendamentos:
         print(agendamento)
-
 
 def listar_pagamentos():
     print("\nPagamentos:")
     for pagamento in pagamentos:
         print(pagamento)
 
-
 def listar_orcamentos():
     print("\nOrçamentos:")
     for orcamento in orcamentos:
         print(orcamento)
 
-
+# Menu principal
 def menu():
     while True:
         print("\nMenu:")
@@ -194,7 +131,6 @@ def menu():
             break
         else:
             print("Opção inválida, tente novamente.")
-
 
 if __name__ == "__main__":
     menu()
