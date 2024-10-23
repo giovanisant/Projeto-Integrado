@@ -15,14 +15,17 @@ CREATE TABLE tbl_usuarios (
     tel_usuario VARCHAR(20) NULL DEFAULT NULL,
     senha_usuario VARCHAR(50) NOT NULL,
     cargo_usuario VARCHAR(20) NOT NULL,
-    cpf_usuario VARCHAR(15) UNIQUE
+    cpf_usuario VARCHAR(15) UNIQUE,
+    tipo_usuario VARCHAR(3) NOT NULL
 )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
 CREATE TABLE tbl_agendamentos (
     id_agend INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    endereco_agend VARCHAR(100) NOT NULL,
+    endereco_agend VARCHAR(150) NOT NULL,
+    estado_agend VARCHAR(50) NOT NULL,
+    cidade_agend VARCHAR(50) NOT NULL
     data_hora_agend DATETIME NULL DEFAULT NULL,
     id_cliente INT NOT NULL,
     id_usuario INT NOT NULL,
