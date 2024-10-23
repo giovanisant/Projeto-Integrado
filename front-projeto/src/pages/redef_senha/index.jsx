@@ -1,7 +1,7 @@
 import React from 'react'
 import './Style.css'
 
-import Logo from '../../assets/imagens/logo.png'
+import Logo_g from '../../assets/imagens/logo-g.png'
 
 function Redef() {
 
@@ -15,7 +15,8 @@ function Redef() {
             <button type='submit'>Enviar</button>
           </form>
 
-          <img src={Logo} alt="Logo GDR" />
+          <div className='imagem'><img src={Logo_g} alt="Logo GDR" /></div>
+
       </div>
   )
 }
