@@ -21,4 +21,3 @@ class Servico:
     
     def __repr__(self):
         return f"Serviço(ID: {self.id_servico}, Nome do serviço: {self.nome_servico}, Descrição: {self.descricao_servico}, Valor: {self.valor_servico})"
-    

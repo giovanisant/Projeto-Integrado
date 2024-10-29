@@ -6,7 +6,6 @@ from agendamento import Agendamento
 from servico import Servico
 
 def main():
-    # Exemplo 
     cliente = Cliente(1, "João Silva", "joao@example.com", "12345678909", "123456789")
     cliente.solicitar_orcamento()
 

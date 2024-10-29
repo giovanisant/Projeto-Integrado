@@ -1,5 +1,6 @@
 class Orcamento:
     def __init__(self, id_orcamento, descricao_orcamento, valor_orcamento,cpf_cliente, id_usuario, id_pagamento):
+
         self.id_orcamento = id_orcamento
         self.descricao_orcamento = descricao_orcamento
         self.valor_orcamento = valor_orcamento
@@ -25,6 +26,3 @@ class Orcamento:
         
     def gerar_fatura(self):
         print(f"Fatura gerada para o orçamento {self.id_orcamento}.")
-    
-    def __repr__(self):
-        return f"Orcamento(ID: {self.id_orcamento}, Descrição: {self.descricao}, Valor: {self.valor_orcamento})"
