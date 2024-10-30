@@ -1,10 +1,30 @@
 .container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 100px;
-    max-width: 50%;
-    width: 500px;
-    height: 500px;
-  }
+  max-height: 95vh;
+  max-width: 95vw;
+}
+
+.foto {
+  display: flex;
+  float: left;
+  padding: 10px;
+  margin: 10px;
+}
+
+.sair {
+  background-color: yellow;
+  display: flex;
+  float: left;
+  padding: 5px;
+  margin: 30px;
   
+}
+
+.botao {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.botao button {
+  width: 48%; 
+  margin: 1%;
+}

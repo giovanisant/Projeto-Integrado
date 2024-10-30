@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import './App.css'
 
+
 import Login from './pages/login/index'
 import Redef from './pages/redef_senha/index'
 import Home from './pages/home/index'

@@ -2,9 +2,12 @@ import React from 'react'
 import { Link }  from 'react-router-dom'
 import './style.css'
 
-import { userForm } from '@hookform/resolvers/yup'
+
+import { useForm } from 'react-hook-form'
 import axios from 'axios'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import * as Yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
 
 import Logo_g from '../../assets/imagens/logo-g.png'
 
@@ -13,20 +16,19 @@ const schema = Yup.object().shape({
     senha: Yup.string().required('Senha é obrigatória'),
 })
 
-
 function Login() {
 
   const { register, handleSubmit, formState: { error } } = useForm({
     resolver: yupResolver(schema),
   })
 
-  const history = useHistory()
+  const navigate = useNavigate()
 
   const onSubmit = async (data) => {
     try {
       const response = await axios.post('http://localhost:5173/', data)
       if (response.data.sucess) {
-        history.push('/home')
+        navigate('/home')
       } 
       } catch (error) {
         alert('Email ou senha inválidos')
