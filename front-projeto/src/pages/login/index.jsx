@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link }  from 'react-router-dom'
-import './style.css'
+import './css/style.css'
 
 
 import { useForm } from 'react-hook-form'
@@ -36,7 +36,7 @@ function Login() {
   }
 
   return (
-      <div className='container'>
+      <div className='containerum'>
           <div className='form'>
             <form>
               <h1>Login</h1>
@@ -45,7 +45,7 @@ function Login() {
               
               <input name='senha' type='password' placeholder='Senha' autocomplete="current-password" {...register('senha')}/>
               
-              <button type='submit'>Entrar</button>
+              <button type='submit' onClick={onSubmit}>Entrar</button>
               
               <Link to={'redefinir_senha'}>Esqueci a senha</Link>
 

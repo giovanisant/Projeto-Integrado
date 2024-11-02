@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.css'
+import './css/style.css'
 
 import Logo_g from '../../assets/imagens/logo-g.png'
 
@@ -8,7 +8,7 @@ function Redef() {
   return (
       <div className='container'>
           <h1>Redefinição de Senha</h1>
-          <form>
+          <form className='um'>
             <p>Insira o endereço de e-mail verificado da sua conta de usuário e lhe enviaremos um link para redefinir sua senha.</p>
 
             <input name='email' type="email" placeholder='E-mail' />
